@@ -1,0 +1,38 @@
+//Authors: Kyle Apish, Josh Reed
+//Date: 1/20/2022
+//Explanation because we can't draw
+
+First, we are calling the function, with our double helper_3_input being fed in as a) itself (plain), b) a pointer (pointer), and c) a reference (reference).
+
+Plain is not actually helper_3_input, but rather it is a copy created by pass-by-value when we used helper_3_input as an argument when calling the function. However, both pointer and reference contain the actual memory address of helper_3_input, and therefore can change the value stored there.
+
+At the start, the three values are 2.
+
+  *pointer += plain;
+
+Here, we're adding the copy of helper_3_input (2) to the value stored in helper_3_input's memory address. As a result, the value stored at pointer AND at reference is now 4. Plain, which is a copy of helper_3_input (as it was before we called the function) stays as 2. So now we have:
+
+plain = 2
+*pointer = 4
+reference = 4
+
+Both *pointer and reference are accessing the value at the memory address they store, which is helper_3_input's memory address.
+
+  reference += *pointer;
+
+Here, we add the value at pointer's address, which is 4, to the value at reference's address, which is also 4, yielding 8. We are storing it at reference's address, which is the same as pointer's address. So now we have:
+
+plain = 2
+*pointer = 8
+reference = 8
+
+  plain += reference;
+
+Finally, we add reference to plain, storing it plain. Since plain is just a copy of helper_3_input and is stored at an entirely separate memory address, it has gone untouched, and will not mess with the others. So 2 + 8 is stored there, and pointer and reference are left alone, leaving us with:
+
+plain = 10
+pointer = 8
+reference = 8.
+
+Finally we multiply them together, and get 640. It feels weird because pointer and reference *seem* like different things, and they technically are. But they point to the same memory address, so any modifications to one modifies the other.
+

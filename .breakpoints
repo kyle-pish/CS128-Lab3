@@ -1,0 +1,28 @@
+{
+  "files": {
+    "Helper 3 Explaination.txt": [
+      {
+        "id": "18580e9c-d21f-479c-94f1-8dcc3aefb370",
+        "line": 1,
+        "version": 0,
+        "index": 0
+      }
+    ],
+    "lab3_Part2.h": [
+      {
+        "id": "737fe5a2-97e3-469e-aebb-900046035905",
+        "line": 6,
+        "version": 7,
+        "index": 70
+      }
+    ],
+    "lab3_part1.cpp": [
+      {
+        "id": "d27e74c3-cf16-48ac-8ac1-4c7b5deabbc3",
+        "line": 1,
+        "version": 2348,
+        "index": 0
+      }
+    ]
+  }
+}
